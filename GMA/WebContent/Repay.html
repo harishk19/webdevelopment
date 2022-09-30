@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=NdDZ3XtR41K3fYtXpSccE_IPXCG7v6NPVWr_icQgKwLBvpF_t35jv1mervvPw82-pjUrui2v7ixKrxCA0smKy80GVI8NhjegwzRYNwby_oP3IrFVHOqZQVaE9LfpbAQfyj5K2ejJ3Fhaalw4MnhzcG2FQcyFz3INgIDVllV2XpxfQTtNZ0LPIU37YMRl65AJTxa8TVBlgYbB4m1mxqMNXSPG0Trz0CsyRgoy5_NzAW7upm0sP8LQ51t7zTYnlw2G2t2rlLhpaeygi6HSRY2-bHkIEEvZwBMltCtbG5ONJi0" charset="UTF-8"></script><style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/mac.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+<body>
+
+  <div class="w3-top"  id="home">
+    <div  id="myNavbar">
+      <a href="index.html" class="w3-bar-item w3-button w3-wide" id="hov"><b>GMA</b> MEDIA MASTERS </a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small" >
+        <a href="about.html" class="w3-bar-item w3-button" id="hov"  > ABOUT</a>
+        <a href="Team.html" class="w3-bar-item w3-button" id="hov"> TEAM</a>
+        <a href="index.html#subs" class="w3-bar-item w3-button" id="hov">DONATIONS</a>
+        <a href="#work" class="w3-bar-item w3-button" id="hov"> GALLERY</a>
+        <!--<a href="login.html" class="w3-bar-item w3-button" id="hov">LOGIN/REGISTER</a>-->
+        <a href="#contact" class="w3-bar-item w3-button" id="hov">CONTACT
+         </a>
+        <!--<a id="logout" class="w3-bar-item w3-button" onclick="logout()" >LOGOUT</a>-->
+        <!--<button id="logout" onclick="logout()">LOGOUT</button>-->
+        <!--<a href="#contact" class="w3-bar-item w3-button" onclick="mainApp.logout();">LOGOUT</a>-->
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-brown w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="Team.html" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+    <a href="#subs" onclick="w3_close()" class="w3-bar-item w3-button">SUBSCRIPTION</a>
+    <a href="#work" class="w3-bar-item w3-button" id="hov"> GALLERY</a>
+  
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  
+  </nav>
+
+<!-- Subs -->
+<div class="w3-container10" style="padding:128px 16px" id="rep">
+  <h3 class="w3-center">Donations</h3>
+  <p class="w3-center w3-large">Please Donate us</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+       <div class="w3-container" style="color: black;">
+          <h3>Donation 1</h3>
+          <p class="w3-opacity clr">Pay Rupees 200/-</p>
+           <p><button class="w3-button w3-darkbrown w3-block" value="OK" type="button" onclick="pay1()">Click Here for Payment</button></p>
+          <script>  
+            function pay1(){  
+              window.location.href = "Donarpass2.html";
+            }  
+            </script> 
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <div class="w3-container" style="color: black;">
+          <h3>Donation 2</h3>
+          <p class="w3-opacity clr">Pay Rupees 500/-</p>
+          <p><button class="w3-button w3-darkbrown w3-block" value="OK" type="button" onclick="pay2()">Click Here for Payment</button></p>
+          <script>  
+            function pay2(){  
+              window.location.href = "Donarpass3.html";
+            }  
+            </script> 
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <div class="w3-container" style="color: black;">
+          <h3>Donation 3</h3>
+          <p class="w3-opacity clr">Pay Rupees 1000/-</p>
+          <p><button class="w3-button w3-darkbrown w3-block" value="OK" type="button" onclick="pay3()">Click Here for Payment</button></p>
+          <script>  
+            function pay3(){  
+              window.location.href = "Donarpass4.html";
+            }  
+            </script> 
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <div class="w3-container" style="color: black;">
+          <h3>Donation 4</h3>
+          <p class="w3-opacity clr">Pay Rupees 2000/-</p>
+           <p><button class="w3-button w3-darkbrown w3-block" value="OK" type="button" onclick="pay4()">Click Here for Payment</button></p>
+          <script>  
+            function pay4(){  
+              window.location.href = "Donarpass5.html";
+            }  
+            </script> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="w3-center w3-black w3-padding-64" id="f">
+ 
+  <p id="ft" style="color:white" >Powered by <a href="http://gamayas.com/" title="Gamayas.com" target="_blank" class="w3-hover-text-green">gamayas.com</a></p>
+  <br><div class="tmsc">
+    <div class="tm1"> <a href="Terms and Conditions.html">Terms and Conditions</a></div>
+    <div class="tm2"><a href="Privacy Policy for GMA Media Masters.html">Privacy Policy</a></div>
+  </div>
+</footer>
+<script>
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+<style>
+ .w3-container10{
+  background-image: url("image0\ \(17\).jpeg");
+      background-size: cover;
+  
+ }
+ .w3-container{
+   background-image: url("musc.jpg");
+   background-position-y: -5px;
+  
+  
+ }
+  #rep{
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  #mySidebar{
+    top: 30px;
+  }
+</style>
+</html>

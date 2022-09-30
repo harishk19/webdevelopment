@@ -1,0 +1,119 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Andada&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-databse.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+
+<link rel="stylesheet" href="style.css">
+    <body>
+        <div class="w3-top">
+            <div  id="myNavbar">
+              <a href="index.html" class="w3-bar-item w3-button w3-wide" id="hov">GMA Media Masters </a>
+              <!-- Right-sided navbar links -->
+              <div class="w3-right w3-hide-small" >
+               
+                <a href="about.html" class="w3-bar-item w3-button" id="hov"  > ABOUT</a>
+                <a href="Team.html" class="w3-bar-item w3-button" id="hov"> TEAM</a>
+                <a href="index.html#subs" class="w3-bar-item w3-button" id="hov">DONATIONS</a>
+                <a href="index.html#work" class="w3-bar-item w3-button" id="hov"> GALLERY</a>
+                <!--<a href="login.html" class="w3-bar-item w3-button" id="hov">LOGIN/REGISTER</a>-->
+                <a href="index.html#contact" class="w3-bar-item w3-button" id="hov">CONTACT
+                 </a>
+               <!---- <a id="logout" class="w3-bar-item w3-button" onclick="logout()" >LOGOUT</a>-->
+                <!--<button id="logout" onclick="logout()">LOGOUT</button>-->
+                <!--<a href="#contact" class="w3-bar-item w3-button" onclick="mainApp.logout();">LOGOUT</a>-->
+                <br>
+              </div>
+              <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+          
+              <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
+       
+          <br>
+          <nav class="w3-sidebar w3-bar-block w3-brown w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
+            <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+            <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+            <a href="Team.html" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+            <a href="index.html#subs" onclick="w3_close()" class="w3-bar-item w3-button">SUBSCRIPTION</a>
+            <a href="index.html#work" class="w3-bar-item w3-button" id="hov"> GALLERY</a>
+          
+            <a href="index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+          
+          </nav>
+        <div class="w3-container1" style="padding:128px 16px" id="about" >
+            <div class=abt><h3 class="w3-center">Brief of GMA Academy</h3>
+              <div class="w3-row-padding w3-center w3-cen" id="poe" style="margin-top:64px">
+                  <p>In our all human generations, music has played an important role in the lifestyle of humans.
+                     Here Significant evidence has been discovered that very early man developed primitive flute from animal bones.</p>
+                     <br>
+                      <p>Voice would have been the first expression of music in our distant ancestors used to bond comfort a sleepless child. These humble beginnings,
+                       the music has evolved in all generations to enjoy today.</p> 
+                       <br>
+                       <p>GMA has started in 1997 at Khammam by G.T.Srinivas and other members. Revered sri.S.P.Balasubrahmanyam has lead GMA as Honorary President and himself conducted "little musicians show" 
+                      as host at GMA platform at Khammam. Having done 100+ live events on stages with prominent Smt. Suseela, 
+                      Smt.Chitra., Sri.S.P.Balu., Sri.V.Ramakrishna., Sri.Koti.& Sri Raj and Sri.Akkineni Nageswarao, Sri.Kantharao,
+                       Sri.Ramana Murthy Sri.Mikkilineni.,Sri Rajendra Prasad, Sri.RaghuBabu and Daggubati Suresh., Sri.Chota.K.Naidu
+                        and Sri.Muppalaneni Shiva.</p>
+                        <br>
+                        <p>GMA is a leader in organising and conducting musical programs to inspire music-loving people.
+                         GMA is committed to the highest standards of musicianship by working with legendary stars of music to provide quality in a professional 
+                         and healthy environment and to develop the culture & discipline in people.</p>
+                </div>
+            </div>
+            </div> 
+            <footer class="w3-center w3-black w3-padding-64" id="f">
+             
+              <p id="ft" style="color:white" >Powered by <a href="http://gamayas.com/" title="Gamayas.com" target="_blank" class="w3-hover-text-green">gamayas.com</a></p>
+              <br><div class="tmsc">
+                <div class="tm1"> <a href="Terms and Conditions.html">Terms and Conditions</a></div>
+                <div class="tm2"><a href="Privacy Policy for GMA Media Masters.html">Privacy Policy</a></div>
+              </div>
+            </footer>
+             
+            <script>
+            // Modal Image Gallery
+            function onClick(element) {
+              document.getElementById("img01").src = element.src;
+              document.getElementById("modal01").style.display = "block";
+              var captionText = document.getElementById("caption");
+              captionText.innerHTML = element.alt;
+            }
+            
+            
+            // Toggle between showing and hiding the sidebar when clicking the menu icon
+            var mySidebar = document.getElementById("mySidebar");
+            
+            function w3_open() {
+              if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+              } else {
+                mySidebar.style.display = 'block';
+              }
+            }
+            
+            // Close the sidebar with the close button
+            function w3_close() {
+                mySidebar.style.display = "none";
+            }
+            </script>
+        <style>
+          #mySidebar{
+  margin-top: 15px !important;
+}
+        </style>
+    </body>
+</html>

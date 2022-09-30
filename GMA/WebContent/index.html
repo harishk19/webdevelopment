@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<title>GMA Masters</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://fonts.googleapis.com/css2?family=Gurajada&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Andada&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-databse.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+#mySidebar{
+  margin-top: 5px !important;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top"  id="home">
+  <div  id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide" id="hov"><b>GMA</b> MEDIA MASTERS </a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" >
+      <a href="about.html" class="w3-bar-item w3-button" id="hov"  > ABOUT</a>
+      <a href="Team.html" class="w3-bar-item w3-button" id="hov"> TEAM</a>
+      <a href="#subs" class="w3-bar-item w3-button" id="hov">DONATIONS</a>
+      <a href="#work" class="w3-bar-item w3-button" id="hov"> GALLERY</a>
+      <!--<a href="login.html" class="w3-bar-item w3-button" id="hov">LOGIN/REGISTER</a>-->
+      <a href="#contact" class="w3-bar-item w3-button" id="hov">CONTACT
+       </a>
+      <!--<a id="logout" class="w3-bar-item w3-button" onclick="logout()" >LOGOUT</a>-->
+      <!--<button id="logout" onclick="logout()">LOGOUT</button>-->
+      <!--<a href="#contact" class="w3-bar-item w3-button" onclick="mainApp.logout();">LOGOUT</a>-->
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-brown w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="Team.html" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#subs" onclick="w3_close()" class="w3-bar-item w3-button">SUBSCRIPTION</a>
+  <a href="#work" class="w3-bar-item w3-button" id="hov"> GALLERY</a>
+
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+
+</nav>
+
+<!-- Header with full-height image -->
+<div class="main1" id="tp">
+
+<div class="ctn">
+<div class="main1t">Ghanthasala Music Academy <br> Media Masters</div>
+<div class="main2t">ఘ౦టసాల స౦గీత అకాడమీ 
+  మీఢియా మాస్టర్స్</div></div>
+
+</div>
+
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+   
+    <img src="sbg.jpg" >
+  
+  </div>
+
+  <div class="mySlides fade">
+ 
+    <img src="kbg.jpg" >
+   
+  </div>
+
+  <div class="mySlides fade">
+
+    <img src="vabg.jpg" >
+  
+  </div>
+  <div class="mySlides fade">
+  
+    <img src="gbg.jpg" >
+  
+  </div>
+
+  <div class="w3-display-left w3-text-white">
+    <div class="bbb">
+      "సాలూరి.... <br><br>Saaluri....</div><br> 
+      <div class="bbc"> స్వరాలు.... సుస్వారాలు.."  
+        <br><br> Swaraalu.... Suswaraalu....
+        <p>అంతర్జాల వేదిక గా.... Online Digital concert... <br><br>
+          అక్టోబర్ 11, 2020 
+          మధ్యాహ్నం 3 గ౦. <br>
+        October 11, 2020. 3 pm onwards. </p>
+
+      </div>
+   
+    
+<div class="setit">
+    <p><a href="reg.html" div class="w3-button w3-white w3-padding-large" >Register for Virtual Event</a></p>
+  </div> 
+   
+      
+
+</div>
+  
+
+
+<div class="w3-container" style="margin-bottom: 0px;" id="poster">
+  <h3 class="w3-center" style="margin-top: 50px;"><b>Upcoming Events</b></h3>
+  <div class="adjust">
+    <ul>
+    <li><img src="poster1.jpg"  onclick="onClick(this)" class="w3-hover-opacity"></li>
+ 
+  <li><img src="poster2.jpg"  onclick="onClick(this)" class="w3-hover-opacity"></li>
+</ul>
+</div>
+</div>
+ 
+
+
+<div class="w3-container5" style=" padding:128px 16px " id="subs">
+  <h3 class="w3-center" style="color: rgb(255, 255, 255);">Donations</h3>
+
+
+  <div class="w3-row-padding w3-section w3-stretch w3-grayscale" >
+    <div class="w3-col l3 m6 w3-margin-bottom" id="note">
+      <div class="w333">
+      <div class="w3-card" >
+        <div class="w3-container bo" style="background-color: rgb(226, 226, 226);">
+          <h3>Event Pass</h3>
+          <p class="w3-opacity clr">₹ 100/-</p>
+     
+           <p><button class="w3-button w3-darkbrown w3-block" style="margin-top:10px"value="OK" type="button" onclick="pay2()">Click Here for Payment</button></p>
+          <script>  
+            function pay2(){  
+              window.location.href = "Donarpass1.html";
+            }  
+            </script> 
+        </div>
+      </div>	
+    
+
+      <div class="w3-card">
+        <div class="w3-container bo" style="background-color: rgb(226, 226, 226);">
+          <h3>Donations</h3>
+          <p class="w3-opacity clr">Your Choice</p>
+         
+           <p><button class="w3-button w3-darkbrown w3-block"  style="margin-top:10px"value="OK" type="button" onclick="pay3()">Click Here for Payment</button></p>
+          <script>  
+            function pay3(){  
+              window.location.href = "Repay.html";
+            }  
+            </script> 
+        </div>
+   
+    </div>
+   
+      
+    </div>
+  </div>
+   
+</div>
+</div>
+
+
+
+<div>
+<div calss="eve" id=eve>
+<div class="eventstart" >
+   <div class="eventte">Event Starts In</div>
+ <div class="eventt" id="eventt"> </div>
+ <div class="eventtex" id="eventtex"><p>Days:Hours:Minutes:Seconds</p></div>
+</div>
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64" id="x">
+  <div class="w3-quarter" style="color:rgb(255, 255, 255)">
+    <span class="w3-xxlarge" >100+</span>
+    <br>Events
+  </div>
+  <div class="w3-quarter" style="color:rgb(255, 255, 255)">
+    <span class="w3-xxlarge">1000+</span>
+    <br>Students
+  </div>
+  <div class="w3-quarter" style="color:rgb(255, 255, 255)">
+    <span class="w3-xxlarge" >89+</span>
+    <br>Happy Clients
+  </div>
+  <div class="w3-quarter" style="color:rgb(255, 255, 255)">
+    <span class="w3-xxlarge" >150+</span>
+    <br>Meetings
+  </div>
+</div>
+</div>
+
+
+<!-- Work Section -->
+<div class="biggg">
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center"  ><b>Our Past Events</b></h3>
+
+
+  
+  <div class="w3-row-padding w3-section" >
+    <div id="pic5" class="w3-col l3 m6">
+      <img src="img111.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic6" class="w3-col l3 m6">
+      <img src="img112.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic7" class="w3-col l3 m6">
+      <img src="img113.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic8" class="w3-col l3 m6">
+      <img src="img114.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section" >
+    <div id="pic9" class="w3-col l3 m6">
+      <img src="img115.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic10" class="w3-col l3 m6">
+      <img src="img116.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic11" class="w3-col l3 m6">
+      <img src="img117.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic12" class="w3-col l3 m6">
+      <img src="img118.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="dots" id="dots"></div>
+  
+   <div class="more" id="more">
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img211.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img212.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img213.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img214.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img215.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img216.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img217.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img218.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img219.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img222.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img221.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img220.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img311 (1).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img312.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img313.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img314.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img315.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img316.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img317.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img318.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img411 (31).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img411 (32).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img411 (33).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img411 (34).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img411 (29).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img411 (28).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img411 (43).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img411 (29).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img411 (1).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img411 (2).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img411 (3).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img411 (4).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img411 (5).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img411 (6).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img411 (7).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img411 (8).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img411 (9).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img411 (10).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img411 (11).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img411 (12).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img411 (13).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img411 (14).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img411 (15).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img411 (16).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img411 (20).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img411 (17).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img411 (18).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img411 (19).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img411 (22).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img411 (23).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img411 (24).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img411 (25).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div id="pic13" class="w3-col l3 m6">
+      <img src="img411 (26).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic14" class="w3-col l3 m6">
+      <img src="img411 (27).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic15" class="w3-col l3 m6">
+      <img src="img411 (40).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div id="pic16" class="w3-col l3 m6">
+      <img src="img411 (41).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+
+  
+
+
+</div>
+<button onclick="myFunction()" id="myBtn">View More</button>
+</div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!--Video-->
+<div class="vid">
+<h2 class="w3-center" style="color: rgb(255, 255, 255);" >Videos</h2>
+<div align="center">
+  <iframe src="https://www.youtube.com/embed/videoseries?list=PLU7o5fL9IFg-yCGzXjzRTaiyJbYBixZqv" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+ 
+</div>
+<script>
+  function videoUrl(hmmmm)
+  {
+  document.getElementById("slider").src=hmmmm;
+  }
+  </script>
+
+</video>
+</div>
+
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center" style="color: white;">Contact</h3>
+  <p class="w3-center w3-large" style="color: white;">Lets get in touch. Send us a message</p>
+  <div style="margin-top:48px" >
+    <div class="vb" style="color: rgb(255, 255, 255);">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right" ></i>Hyderabad,Telangana</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right" ></i> Phone:+91 9966544889</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right" > </i> Email:contact@gmamediamasters.com</p>
+    <br>
+  
+    <form target="_blank" onsubmit="sendMessage()">
+      <p><input id="name" type="text" placeholder="Name" required name="Name" autocomplete="off"  style="width: 60%;"></p>
+      <p><input id="email" type="email" placeholder="Email" required name="Email" autocomplete="off" style="width: 60%;"></p>
+      <p><input id="phone_number" type="number" placeholder="Phone Number"  required name="Phone Number" autocomplete="off" style="width: 60%;"></p>
+      <p><input id="message" type="text" placeholder="Message" required name="Message" autocomplete="off" style="width: 60%;"></p>
+      <p>
+        <button class="w3-button.w3-darkbrown.w3-block" style="margin-top: 20px" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  </div>
+  </div>
+  
+</div>
+
+<div class="logos"><h3>Follow us on </h3>
+  <a href="https://www.facebook.com/Ghantasala-Music-Academy-100279341786832/"><i class="fa fa-facebook-square" aria-hidden="true" ></i></a>
+  <a href="https://twitter.com/GhantasalaMusic"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://wa.me/919966544889"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+  <a href="https://www.instagram.com/ghantasalamusicacademy/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  <a href="https://www.youtube.com/channel/UCh_pLZnu3hbfTCOixi1pkog/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+</div>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64" id="f">
+  <a href="#tp" class="w3-button sih"><i class="fa fa-arrow-up w3-margin-right"  style="color:rgb(3, 3, 3)"></i>To the top</a>
+  <p id="ft" style="color:white" >Powered by <a href="http://gamayas.com/" title="Gamayas.com" target="_blank" class="w3-hover-text-green">gamayas.com</a></p>
+  <br><div class="tmsc">
+    <div class="tm1"> <a href="Terms and Conditions.html">Terms and Conditions</a></div>
+    <div class="tm2"><a href="Privacy Policy for GMA Media Masters.html">Privacy Policy</a></div>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+<script src="firebase.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
